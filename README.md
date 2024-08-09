@@ -2,7 +2,7 @@
 
 ## Required packages
 
- - nvim
+### nvim
  - ripgrep
  - fzf
  - node & npm
