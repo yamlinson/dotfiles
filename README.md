@@ -3,7 +3,10 @@
 ## Required packages
 
 ### nvim
- - ripgrep
- - fzf
- - node & npm
- - rust & cargo
+
+- ripgrep
+- fzf
+- lazygit
+- node & npm
+- rust & cargo
+- go
