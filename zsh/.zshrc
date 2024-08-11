@@ -41,6 +41,8 @@ mkcd () { mkdir $1 && cd $1 }
 
 # User aliases
 alias apa="ansible-playbook --ask-become-pass"
+alias lsa="ls -la"
+alias sua="su - admin"
 alias trig="tree -aCI '.git'"
 alias gfs="git fetch && git status"
 
