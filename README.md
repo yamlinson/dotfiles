@@ -10,3 +10,7 @@
 - node & npm
 - rust & cargo
 - go
+
+### tmux
+
+- tmux-plugins/tpm
