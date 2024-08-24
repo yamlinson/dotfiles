@@ -29,12 +29,15 @@ setopt extendedglob
 unsetopt autocd beep nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Options
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Keybinds
+bindkey '^I' autosuggest-accept
 
 # User functions
 mkcd () { mkdir $1 && cd $1 }
@@ -50,4 +53,9 @@ alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmt="tmux attach -t"
 alias tmk="tmux kill-session"
+
+# Sources
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
