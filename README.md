@@ -14,3 +14,11 @@
 ### tmux
 
 - tmux-plugins/tpm
+- sesh
+
+### zsh
+
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- powerlevel10k
+- zoxide
