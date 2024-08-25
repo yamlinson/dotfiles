@@ -42,20 +42,6 @@ bindkey '^I' autosuggest-accept
 # User functions
 mkcd () { mkdir $1 && cd $1 }
 
-# From Quazar_omega on r/unixporn
-# https://www.reddit.com/r/unixporn/comments/sxa02o/comment/hxrpq0m/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
-LAST_REPO=""
-cd() {
-    builtin cd "$@"
-    git rev-parse 2>/dev/null
-    if [ $? -eq 0 ]; then
-        if [ "$LAST_REPO" != $(basename $(git rev-parse --show-toplevel)) ]; then
-            onefetch
-            LAST_REPO=$(basename $(git rev-parse --show-toplevel))
-        fi
-    fi
-}
-
 # User aliases
 alias c="clear"
 alias cdg="cd ~/git"
@@ -69,10 +55,10 @@ alias tmn="tmux new -s"
 alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmt="tmux attach -t"
-alias tmk="tmux kill-session"
 
 # Sources
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(zoxide init --cmd cd zsh)"
 
