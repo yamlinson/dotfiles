@@ -10,7 +10,7 @@ return {
 			java = { "checkstyle" },
 			javascript = { "eslint_d" },
 			typescript = { "eslint_d" },
-			go = { "golangci-lint" },
+			go = { "revive" },
 			kotlin = { "ktlint" },
 			php = { "phpmd" },
 			python = { "pylint" },

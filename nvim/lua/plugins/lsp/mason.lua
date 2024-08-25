@@ -40,7 +40,7 @@ return {
 				"checkstyle",
 				"eslint_d",
 				"gofumpt",
-				"golangci-lint",
+				"revive",
 				"google-java-format",
 				"isort",
 				"ktfmt",

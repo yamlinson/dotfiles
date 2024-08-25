@@ -20,6 +20,7 @@ return {
 				markdown = { "prettier" },
 				php = { "pretty-php" },
 				lua = { "stylua" },
+				hcl = { "hclfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
