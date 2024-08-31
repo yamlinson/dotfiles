@@ -4,7 +4,7 @@ local keymap = vim.keymap
 
 -- misc or unsorted...
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-keymap.set("i", "<C-CR>", "<ESC>o", { desc = "Start new line in insert mode" })
+keymap.set("i", "<C-CR>", "<Esc>o", { desc = "Start new line in insert mode" })
 
 -- buffer stuff
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste from buffer without yanking selection" })
@@ -22,8 +22,8 @@ keymap.set("n", "n", "nzzzv", { desc = "Next search result, center cursor" })
 keymap.set("n", "N", "Nzzzv", { desc = "Previous search result, center cursor" })
 
 -- window splits
-keymap.set("n", "<leader>sv", "<C-w>s", { desc = "Open new pane vertically" })
-keymap.set("n", "<leader>sh", "<C-w>v", { desc = "Open new pane horizontally" })
+keymap.set("n", "<leader>sv", "<C-w>s", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", "<C-w>v", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
