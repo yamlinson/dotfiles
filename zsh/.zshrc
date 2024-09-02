@@ -56,6 +56,9 @@ alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmt="tmux attach -t"
 
+# Path
+export PATH=$PATH:`go env GOPATH`/bin
+
 # Sources
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
