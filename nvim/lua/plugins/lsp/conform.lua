@@ -21,6 +21,7 @@ return {
 				php = { "pretty-php" },
 				lua = { "stylua" },
 				hcl = { "hclfmt" },
+				terraform = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

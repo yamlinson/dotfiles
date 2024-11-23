@@ -22,6 +22,9 @@ opt.autoindent = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- substitute
+opt.gdefault = true
+
 -- colors
 opt.termguicolors = true
 opt.background = "dark"

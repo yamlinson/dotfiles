@@ -1,26 +1,25 @@
 return {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+	"nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 
-    config = function()
+	config = function()
+		local lualine = require("lualine")
+		local lazy_status = require("lazy.status")
 
-        local lualine = require("lualine")
-        local lazy_status = require("lazy.status")
-
-        lualine.setup({
-            options = { theme = "moonfly" },
-            sections = {
-                lualine_x = {
-                    {
-                        lazy_status.updates,
-                        cond = lazy_status.has_updates,
-                        color = { fg = "#ff9e64" },
-                    },
-                    { "encoding" },
-                    { "fileformat" },
-                    { "filetype" },
-                }
-            }
-        })
-    end,
+		lualine.setup({
+			options = { theme = "nord" },
+			sections = {
+				lualine_x = {
+					{
+						lazy_status.updates,
+						cond = lazy_status.has_updates,
+						color = { fg = "#ff9e64" },
+					},
+					{ "encoding" },
+					{ "fileformat" },
+					{ "filetype" },
+				},
+			},
+		})
+	end,
 }

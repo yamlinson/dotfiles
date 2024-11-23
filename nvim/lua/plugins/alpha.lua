@@ -6,13 +6,13 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 
 		-- Set header
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#0080ff" })
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#00bfff" })
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#00ffff" })
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#00ffbf" })
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#00ff80" })
-		vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#00ff40" })
-		vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#edd691" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo1", { fg = "#5e81ac" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo2", { fg = "#6785a7" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo3", { fg = "#81a1c1" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo4", { fg = "#8bc5eb" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo5", { fg = "#88c0d0" })
+		vim.api.nvim_set_hl(0, "NeovimDashboardLogo6", { fg = "#8fbcbb" })
+		vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#a3be8c" })
 		dashboard.section.header.type = "group"
 		dashboard.section.header.val = {
 			{

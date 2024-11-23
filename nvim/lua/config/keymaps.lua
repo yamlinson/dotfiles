@@ -10,6 +10,10 @@ keymap.set("i", "<C-CR>", "<Esc>o", { desc = "Start new line in insert mode" })
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste from buffer without yanking selection" })
 keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void buffer" })
 
+-- find and replace
+keymap.set("n", "<leader>rr", "*:%s//", { desc = "Replace all instances of word under cursor" })
+keymap.set("n", "<leader>rc", "*:%s///c<left><left>", { desc = "Replace all under cursor, with confirm" })
+
 -- move selection
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection up" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection down" })
@@ -34,8 +38,8 @@ keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to the up window" })
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to the right window" })
 
 -- tabs
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer new tab" })
+keymap.set("n", "<leader>tbo", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<leader>tbx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+keymap.set("n", "<leader>tbn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+keymap.set("n", "<leader>tbp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+keymap.set("n", "<leader>tbf", "<cmd>tabnew %<CR>", { desc = "Open current buffer new tab" })
