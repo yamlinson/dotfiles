@@ -16,7 +16,7 @@ zstyle ':completion:*' menu select=0
 zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/admin/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -55,9 +55,13 @@ alias tmn="tmux new -s"
 alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmt="tmux attach -t"
+alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
+alias paf="pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.HiFi__Line1__sink"
+alias pal="pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.HiFi__Line2__sink"
 
-# Path
+# Exports
 export PATH=$PATH:`go env GOPATH`/bin
+export EDITOR=nvim
 
 # Sources
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
