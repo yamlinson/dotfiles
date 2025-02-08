@@ -26,7 +26,6 @@ return {
 				"marksman",
 				"pyright",
 				"terraformls",
-				"tsserver",
 				"vuels",
 				"yamlls",
 			},
