@@ -12,6 +12,10 @@ cursor                #81A1C1
 
 {{- if eq .chezmoi.os "linux" }}
 background_opacity 0.8
+{{- else }}
+background_image ~/.config/kitty/background_image
+background_image_layout cscaled
+background_tint 0.95
 {{- end }}
 
 # black
