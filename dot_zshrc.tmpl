@@ -33,6 +33,11 @@ bindkey -v
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Import work options
+if [ -f ~/.config/zsh/work.zsh ]; then
+    source ~/.config/zsh/work.zsh
+fi
+
 # Options
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
@@ -55,10 +60,12 @@ alias tmn="tmux new -s"
 alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmt="tmux attach -t"
+alias cm="chezmoi"
+{{- if eq .chezmoi.os "linux" }}
 alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias paf="pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.HiFi__Line1__sink"
 alias pal="pactl set-default-sink alsa_output.usb-Focusrite_Scarlett_2i4_USB-00.HiFi__Line2__sink"
-alias cm="chezmoi"
+{{- end }}
 
 # Exports
 export PATH=$PATH:`go env GOPATH`/bin
@@ -75,6 +82,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+{{- else if eq .chezmoi.arch "amd64" }}
+source /usr/local/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 {{- end }}
 {{- end }}
 eval "$(zoxide init --cmd cd zsh)"
