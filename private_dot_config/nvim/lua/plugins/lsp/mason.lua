@@ -16,6 +16,7 @@ return {
 				"bashls",
 				"cssls",
 				"dockerls",
+				"emmet-language-server",
 				"gopls",
 				"html",
 				"intelephense",
