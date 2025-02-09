@@ -1,0 +1,95 @@
+@define-color night1 #2e3440;
+@define-color night2 #3b4252;
+@define-color night3 #434c5e;
+@define-color night4 #4c566a;
+@define-color storm1 #d8dee9;
+@define-color storm2 #e5e9f0;
+@define-color storm3 #eceff4;
+@define-color frost1 #8fbcbb;
+@define-color frost2 #88c0d0;
+@define-color frost3 #81a1c1;
+@define-color frost4 #5e81ac;
+@define-color aurora1 #bf616a;
+@define-color aurora2 #d08770;
+@define-color aurora3 #ebcb8b;
+@define-color aurora4 #a3be8c;
+@define-color aurora5 #b48ead;
+
+* {
+  font-family: "MesloLGS NF", monospace;
+}
+
+window {
+  margin: 0px;
+  padding: 10px;
+  background-color: @night2;
+  border: 2px solid @frost2;
+  border-radius: 8px;
+}
+
+#input {
+  margin: 5px 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: @night2;
+  color: @storm3;
+}
+
+#input image {
+  border: none;
+  color: @aurora4;
+}
+
+#input * {
+  outline: 4px solid @aurora2;
+}
+
+#inner-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @night2;
+}
+
+#outer-box {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @night2;
+}
+
+#scroll {
+  margin: 0px;
+  padding: 10px;
+  border: none;
+  background-color: @night2;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: @storm2;
+}
+
+#entry {
+  background-color: @night2;
+}
+
+#entry arrow {
+  border: none;
+  color: @aurora4;
+}
+
+#entry:selected {
+  border: 2px solid @frost2;
+  border-radius: 8px;
+}
+
+#entry:selected #text {
+  color: @aurora3;
+}
+
+#entry:drop(active) {
+  background-color: @frost2;
+}

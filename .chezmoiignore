@@ -2,5 +2,7 @@ README.md
 
 {{- if ne .chezmoi.os "linux" }}
 .config/hypr
+.config/waybar
+.config/wofi
 Pictures
 {{- end }}
