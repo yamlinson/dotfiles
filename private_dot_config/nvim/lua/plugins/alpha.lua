@@ -50,7 +50,6 @@ return {
 		-- Set menu
 		dashboard.section.buttons.val = {
 			dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
-			dashboard.button("LDR ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
 			dashboard.button("LDR ff", "󰱼  > Find File", "<cmd>Telescope find_files<CR>"),
 			dashboard.button("LDR fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
 			dashboard.button("LDR wr", "󰁯  > Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
@@ -59,7 +58,7 @@ return {
 
 		-- Footer
 		dashboard.section.footer.val = {
-			" Chop wood. Carry water. ",
+			" Spring über deinen Schatten ",
 		}
 		dashboard.section.footer.opts.hl = "AlphaFooter"
 
