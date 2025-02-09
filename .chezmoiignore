@@ -1,1 +1,6 @@
 README.md
+
+{{- if ne .chezmoi.os "linux" }}
+.config/hypr
+Pictures
+{{- end }}
