@@ -222,9 +222,10 @@ bind = $mainMod, K, movefocus, u
 bind = $mainMod, L, movefocus, r
 
 # Audio controls
-bind = $mainMod, F8, exec, supersonic-desktop -previous
+bind = $mainMod, F7, exec, supersonic-desktop -previous
+bind = $mainMod, F8, exec, supersonic-desktop -next
 bind = $mainMod, F9, exec, supersonic-desktop -play-pause
-bind = $mainMod, F10, exec, supersonic-desktop -next
+bind = $mainMod, F10, exec, ~/scripts/outs.py -n
 bind = $mainMod CONTROL, F11, exec, pactl set-sink-volume @DEFAULT_SINK@ 0%
 bind = $mainMod, F11, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
 bind = $mainMod, F12, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
