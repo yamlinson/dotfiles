@@ -5,6 +5,7 @@ local keymap = vim.keymap
 -- misc or unsorted...
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("i", "<C-CR>", "<Esc>o", { desc = "Start new line in insert mode" })
+keymap.set("n", "<leader>yp", 'ggVG"+y', { desc = "Yank page to clipboard" })
 
 -- buffer stuff
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste from buffer without yanking selection" })
