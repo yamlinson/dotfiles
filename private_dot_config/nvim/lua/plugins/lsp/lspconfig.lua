@@ -68,5 +68,11 @@ return {
 				})
 			end,
 		})
+
+		lspconfig.solargraph.setup({
+			cmd = { "solargraph", "stdio" },
+			filetypes = { "ruby" },
+			root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
+		})
 	end,
 }

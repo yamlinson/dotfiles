@@ -18,6 +18,7 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
+				erb = { "erb-formatter" },
 				php = { "pretty-php" },
 				lua = { "stylua" },
 				hcl = { "hclfmt" },
