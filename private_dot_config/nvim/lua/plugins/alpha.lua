@@ -58,7 +58,7 @@ return {
 
 		-- Footer
 		dashboard.section.footer.val = {
-			" Spring über deinen Schatten ",
+			" Work harder, get smarter. ",
 		}
 		dashboard.section.footer.opts.hl = "AlphaFooter"
 
