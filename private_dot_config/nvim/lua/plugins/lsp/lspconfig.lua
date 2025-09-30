@@ -8,7 +8,7 @@ return {
 		"mason-org/mason-lspconfig.nvim",
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
+		-- local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
@@ -69,10 +69,16 @@ return {
 		-- 	end,
 		-- })
 
-		lspconfig.solargraph.setup({
+		-- lspconfig.solargraph.setup({
+		-- 	cmd = { "solargraph", "stdio" },
+		-- 	filetypes = { "ruby" },
+		-- 	root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
+		-- })
+
+		vim.lsp.config("solargraph", {
 			cmd = { "solargraph", "stdio" },
 			filetypes = { "ruby" },
-			root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
+			-- root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
 		})
 	end,
 }
