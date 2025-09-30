@@ -21,7 +21,7 @@ keymap.set("i", "<C-S>", function()
 	require("Comment.api").toggle.linewise.current()
 	vim.api.nvim_feedkeys("o", "n", false)
 end, { noremap = true, silent = true, desc = "Insert timestamp" })
-keymap.set("n", "gl", ":e $LOG_NOTE_FILE<CR>", { desc = "Open current log file" })
+keymap.set("n", "gl", ":e $LOG_NOTE_FILE<CR>Go<CR>", { desc = "Open current log file" })
 
 -- buffer stuff
 keymap.set("x", "<leader>p", '"_dP', { desc = "Paste from buffer without yanking selection" })
