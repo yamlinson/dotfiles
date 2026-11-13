@@ -1,0 +1,28 @@
+# Per-machine settings, keyed by `chezmoi data | grep hostname` (.chezmoi.hostname).
+# Any host not listed here gets `_default`.
+#
+# monitors:          rendered into ~/.config/hypr/machine.lua as hl.monitor() calls,
+#                    listed left-to-right (this order is also the split-workspace priority).
+# split_workspaces:  fetch and enable the split-monitor-workspaces Lua plugin.
+# primary:           output that game windows (Steam) are sent to; "" to leave placement alone.
+
+hosts:
+  _default:
+    monitors:
+      - { output: "", mode: "preferred", position: "auto", scale: "auto" }
+    split_workspaces: false
+    primary: ""
+
+  cirque:
+    monitors:
+      - { output: "HDMI-A-1", mode: "preferred", position: "0x0", scale: 2 }
+    split_workspaces: false
+    primary: "HDMI-A-1"
+
+  atoll:
+    monitors:
+      - { output: "HDMI-A-2", mode: "1920x1080",        position: "0x180",    scale: 1 }
+      - { output: "DP-2",     mode: "2560x1440@143.97", position: "1920x0",   scale: 1 }
+      - { output: "HDMI-A-1", mode: "1920x1080",        position: "4480x180", scale: 1 }
+    split_workspaces: true
+    primary: "DP-2"

@@ -1,0 +1,4 @@
+{{- /* Returns the current host's entry from .chezmoidata/hosts.yaml as JSON, falling back to _default. */ -}}
+{{- $hosts := .hosts -}}
+{{- $host := get $hosts .chezmoi.hostname | default (get $hosts "_default") -}}
+{{- $host | toJson -}}
