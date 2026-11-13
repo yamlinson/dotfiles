@@ -28,12 +28,8 @@
             "urgent": "",
             "active": "",
             "visible": "",
-            "persistent": "",
             "empty": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-            "*": 5,
+            "default": ""
         }
     },
     "keyboard-state": {
