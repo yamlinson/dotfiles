@@ -6,6 +6,7 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
+				c = { "clang-format" },
 				bash = { "shellharden" },
 				go = { "gofumpt" },
 				java = { "google-java-format" },

@@ -10,7 +10,10 @@ return {
 
 		treesitter.setup({
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = {
+				enable = true,
+				disable = { "c", "cpp" },
+			},
 			ensure_installed = {
 				"bash",
 				"comment",
