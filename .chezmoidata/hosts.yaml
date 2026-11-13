@@ -5,6 +5,8 @@
 #                    listed left-to-right (this order is also the split-workspace priority).
 # split_workspaces:  fetch and enable the split-monitor-workspaces Lua plugin.
 # primary:           output that game windows (Steam) are sent to; "" to leave placement alone.
+# idle:              start hypridle (screen lock / DPMS on idle). Defaults to true.
+# browser:           command bound to SUPER+B. Defaults to "zen-browser".
 
 hosts:
   _default:
@@ -12,12 +14,16 @@ hosts:
       - { output: "", mode: "preferred", position: "auto", scale: "auto" }
     split_workspaces: false
     primary: ""
+    idle: true
+    browser: "zen-browser"
 
   cirque:
     monitors:
       - { output: "HDMI-A-1", mode: "preferred", position: "0x0", scale: 2 }
     split_workspaces: false
     primary: "HDMI-A-1"
+    idle: false          # outputs to a TV; no need to lock/blank on idle
+    browser: "firefox"
 
   atoll:
     monitors:
@@ -26,3 +32,5 @@ hosts:
       - { output: "HDMI-A-1", mode: "1920x1080",        position: "4480x180", scale: 1 }
     split_workspaces: true
     primary: "DP-2"
+    idle: true
+    browser: "zen-browser"

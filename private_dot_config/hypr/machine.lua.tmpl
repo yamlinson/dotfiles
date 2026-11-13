@@ -5,6 +5,8 @@ return {
     hostname = {{ .chezmoi.hostname | toJson }},
     split_workspaces = {{ $host.split_workspaces | default false }},
     primary = {{ $host.primary | default "" | toJson }},
+    idle = {{ if hasKey $host "idle" }}{{ $host.idle }}{{ else }}true{{ end }},
+    browser = {{ $host.browser | default "zen-browser" | toJson }},
     monitors = {
 {{- range $host.monitors }}
         { output = {{ .output | toJson }}, mode = {{ .mode | toJson }}, position = {{ .position | toJson }}, scale = {{ .scale | toJson }} },

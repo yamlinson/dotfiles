@@ -1,7 +1,7 @@
 -- Hyprland config (Lua format). Managed by chezmoi.
 -- Wiki: https://wiki.hypr.land/configuring/
 --
--- Machine-specific settings (monitors, split workspaces) come from machine.lua,
+-- Machine-specific settings (monitors, split workspaces, idle, browser) come from machine.lua,
 -- which chezmoi generates from .chezmoidata/hosts.yaml. This file is shared by all hosts.
 
 local machine = require("machine")
@@ -23,6 +23,7 @@ end
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "wofi --show drun"
+local browser     = machine.browser
 
 
 -------------------
@@ -35,7 +36,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd([[for f in /usr/lib/pam_kwallet_init "$HOME/.local/libexec/pam_kwallet_init"; do [ -x "$f" ] && exec "$f"; done]])
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
-    hl.exec_cmd("hypridle")
+    if machine.idle then
+        hl.exec_cmd("hypridle")
+    end
     hl.exec_cmd("nextcloud")
     hl.exec_cmd("joplin-desktop")
     hl.exec_cmd("supersonic-desktop")
@@ -207,7 +210,7 @@ hl.bind(mainMod .. " + V",           hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE",       hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P",           hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + T",        hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + B",           hl.dsp.exec_cmd("firefox"))
+hl.bind(mainMod .. " + B",           hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SHIFT + M",   hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Move focus with mainMod + hjkl
